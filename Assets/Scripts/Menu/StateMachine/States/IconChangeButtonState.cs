@@ -34,5 +34,6 @@ namespace Menu.StateMachine.States
 		protected virtual void OnStateEnter()
 		{
 		}
+		
 	}
 }

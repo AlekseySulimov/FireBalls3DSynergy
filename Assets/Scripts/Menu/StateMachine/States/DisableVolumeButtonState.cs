@@ -1,10 +1,7 @@
 ﻿namespace Menu.StateMachine.States
 {
-	public class DisableVolumeButtonState : IconChangeButtonState
+	public class DisableVolumeButtonState : ConfigureVolumeButtonState 
 	{
-		protected override void OnStateEnter()
-		{
-			
-		}
+		protected override float VolumeLevel => -80.0f;
 	}
 }

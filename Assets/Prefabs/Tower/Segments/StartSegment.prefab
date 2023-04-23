@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 618588102013915295}
   - component: {fileID: 618588102013915294}
   - component: {fileID: 618588102013915281}
-  - component: {fileID: -6360458054566348527}
+  - component: {fileID: 7096867424249671219}
   m_Layer: 0
-  m_Name: 8SideCylinderSegment
+  m_Name: StartSegment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -786,7 +786,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618588102013915280}
   m_Mesh: {fileID: 0}
---- !u!114 &-6360458054566348527
+--- !u!114 &7096867424249671219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

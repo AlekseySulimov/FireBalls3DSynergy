@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Touch = Input.Touches.Touch;
 
 namespace Input
 {

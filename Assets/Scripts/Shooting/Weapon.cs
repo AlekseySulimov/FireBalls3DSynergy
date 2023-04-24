@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityObject = UnityEngine.Object;
+
 namespace Shooting
 {
 	public class Weapon

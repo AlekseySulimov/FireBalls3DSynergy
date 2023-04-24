@@ -1,4 +1,4 @@
-﻿namespace Input
+﻿namespace Input.Touches
 {
 	public struct Touch
 	{

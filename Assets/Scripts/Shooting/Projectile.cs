@@ -14,7 +14,7 @@ namespace Shooting
 			_rigidbody = GetComponent<Rigidbody>();
 		}
 
-		public void Shooting(Vector3 position, Vector3 direction, float speed)
+		public void Shoot(Vector3 position, Vector3 direction, float speed)
 		{
 			transform.position = position;
 			StartCoroutine(MoveAlong(direction, speed));

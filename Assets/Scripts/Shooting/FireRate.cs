@@ -5,24 +5,21 @@ namespace Shooting
 	public class FireRate
 	{
 		private readonly float _value;
-		private readonly Weapon _weapon;
-		
+
 		private  float _lastShootTime;
 
-		public FireRate(float value, Weapon weapon)
+		public FireRate(float value)
 		{
 			_value = value;
-			_weapon = weapon;
 		}
-
 		private bool CanShoot => Time.time >= _lastShootTime + 1.0f / _value;
 
-		public void Shoot()
+		public void Shoot(Weapon weapon)
 		{
 			if (CanShoot == false)
 				return;
 			
-			_weapon.Shoot();
+			weapon.Shoot();
 			_lastShootTime = Time.time;
 		}
 	}

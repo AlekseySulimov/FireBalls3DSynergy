@@ -2751,10 +2751,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c2b2edc73e4f41b400552d13302f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectile: {fileID: -4628529828387832906, guid: 1767a2ec3ce507e4ab8a63e70fb10ca5,
-    type: 3}
   _character: {fileID: 4965154532632912877}
-  _projectileSpeed: 10
+  _shootingPreferences: {fileID: 11400000, guid: a4b8ff11bd1c1ac488ac344403047da7,
+    type: 2}
 --- !u!4 &1198492163
 Transform:
   m_ObjectHideFlags: 0

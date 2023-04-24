@@ -7,21 +7,19 @@ namespace PlayerComponents
 {
 	public class Player : MonoBehaviour
 	{
-		[SerializeField] private Projectile _projectile;
 		[SerializeField] private Character _character;
-		[SerializeField] private float _projectileSpeed;
-		[SerializeField] private float _rate;
+		[SerializeField] private ShootingPreferencesSo _shootingPreferences;
 		
 		private Weapon _weapon;
 		private FireRate _fireRate;
 
 		private void Start()
 		{
-			_weapon = new Weapon(_character.ShootPoint, _projectile, _projectileSpeed);
-			_fireRate = new FireRate(_rate, _weapon);
+			_weapon = _shootingPreferences.CreateWeapon(_character.ShootPoint);
+			_fireRate = _shootingPreferences.CreateFireRate();
 		}
 
 		public void Shoot() =>
-			_fireRate.Shoot();
+			_fireRate.Shoot(_weapon);
 	}
 }

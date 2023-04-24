@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Paths
 {
-	public class PathFollowing : MonoBehaviour
+	public class PathFollowing 
 	{
 		private readonly Path _path;
 		private readonly MonoBehaviour _follower;

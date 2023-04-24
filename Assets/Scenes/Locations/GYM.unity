@@ -3926,7 +3926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _root: {fileID: 1734181086}
-  _prewarmedMemberCount: 15
+  _prewarmedMemberCount: 9
 --- !u!4 &1734181086
 Transform:
   m_ObjectHideFlags: 0

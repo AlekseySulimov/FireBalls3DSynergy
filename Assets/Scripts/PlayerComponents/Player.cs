@@ -1,7 +1,9 @@
 ﻿using System;
 using Characters;
 using Paths;
+using Pool;
 using Shooting;
+using Shooting.Pool;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,7 +13,9 @@ namespace PlayerComponents
 	{
 		[SerializeField] private Character _character;
 		[SerializeField] private ShootingPreferencesSo _shootingPreferences;
-
+		[SerializeField] private ProjectilePool _projectilePool;
+		
+		
 		[SerializeField] private Path _path;
 		[SerializeField] private MovePreferencesSo _movePreferences;
 
@@ -20,8 +24,11 @@ namespace PlayerComponents
 		private PathFollowing _pathFollowing;
 		private void Start()
 		{
-			_weapon = _shootingPreferences.CreateWeapon(_character.ShootPoint);
-			_fireRate = _shootingPreferences.CreateFireRate();
+			_projectilePool.Initialize(_shootingPreferences.ProjectileFactory);
+			_projectilePool.Prewarm();
+
+			_weapon = new Weapon(_character.ShootPoint, _projectilePool, _shootingPreferences.ProjectileSpeed);
+			_fireRate = new FireRate(_shootingPreferences.FireRate);
 			_pathFollowing = new PathFollowing(_path, this, _movePreferences);
 		}
 

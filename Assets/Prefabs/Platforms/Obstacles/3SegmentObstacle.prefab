@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8142107641270580799}
   - component: {fileID: 8451720819751919428}
+  - component: {fileID: 7947532952635725332}
   - component: {fileID: 2876356574728176256}
   - component: {fileID: 2332385148953059730}
-  - component: {fileID: 3035585511681851744}
+  - component: {fileID: 1535618563}
+  - component: {fileID: 7735864074683262598}
   m_Layer: 0
   m_Name: 3SegmentObstacle
   m_TagString: Untagged
@@ -27,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5010301710106351291}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.05, z: 0}
   m_LocalScale: {x: 7, y: 1, z: 7}
   m_ConstrainProportionsScale: 0
@@ -599,11 +601,24 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2745
+  m_VersionIndex: 2925
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!65 &7947532952635725332
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010301710106351291}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40450856, y: 1, z: 0.23549674}
+  m_Center: {x: -0.20225428, y: 0, z: -0.3822516}
 --- !u!23 &2876356574728176256
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -654,17 +669,74 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5010301710106351291}
   m_Mesh: {fileID: 0}
---- !u!64 &3035585511681851744
-MeshCollider:
+--- !u!114 &1535618563
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5010301710106351291}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5403d695763454f87cfa0af4bfd860c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveDuration:
+    Min: 2
+    Max: 4
+  _changeSpeedDuration:
+    Min: 1
+    Max: 2
+  _speed:
+    Min: 45
+    Max: 80
+  _changeSpeedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.42015812
+      value: 1.0786324
+      inSlope: 1.0263505
+      outSlope: 1.0263505
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &7735864074683262598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010301710106351291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c74326ad34a45efaa95627dec703fb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  _playerInputHandler: {fileID: 0}
+  _pool: {fileID: 0}
+  _projectileFactory: {fileID: 11400000, guid: 393136ceefde587468911ec36749f223, type: 2}
+  _bouncePreferences: {fileID: 11400000, guid: a66b6f05e5c523e43af5d40594ffec4e, type: 2}

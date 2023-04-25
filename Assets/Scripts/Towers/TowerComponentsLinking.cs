@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Shooting.Pool;
 using Towers.Generation;
 using Towers.Generation.Disassembling;
+using UI.TowerSegmentsLeftText;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -14,6 +15,7 @@ namespace Towers
 		[SerializeField] private TowerGenerator _generator;
 		[SerializeField] private Transform _towerRoot;
 		[SerializeField] private RestoreProjectilePoolTrigger _projectileHitTrigger;
+		[SerializeField] private TowerSegmentsLeftText _segmentsLeftText;
 		
 		private TowerDisassembling _disassembling;
 		private Tower _tower;

@@ -30,5 +30,7 @@ namespace Pool
 		{
 			_pool.Return(member);
 		}
+		public void Enable() => gameObject.SetActive(true);
+		public void Disable() => gameObject.SetActive(false);
 	}
 }

@@ -32,8 +32,10 @@ namespace Physics
 			_preferences = preferences;
 		}
 
-		public void BounceTo(Vector3 target, Vector3 startPosition) =>
+		public void BounceTo(Vector3 target, Vector3 startPosition)
+		{
 			_coroutineExecutor.Start(InterpolatePositionTo(target, startPosition));
+		}
 
 		private IEnumerator InterpolatePositionTo(Vector3 target, Vector3 startPosition)
 		{

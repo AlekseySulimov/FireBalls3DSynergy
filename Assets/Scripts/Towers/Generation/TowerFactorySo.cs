@@ -16,7 +16,7 @@ namespace Towers.Generation
 		[Space] [SerializeField] private Material[] _materials = Array.Empty<Material>();
 		private int SpawnTimePerSegmentsMillisecond => (int)(_spawnTimePerSegment * 1000);
 		
-		public event Action SegmentCreated;
+		public event Action<int> SegmentCreated;
 		public async Task<Tower> CreateAsync(Transform tower, CancellationToken cancellationToken)
 		{
 			Vector3 position = tower.position;
@@ -30,7 +30,7 @@ namespace Towers.Generation
 
 				position = GetNextPositionAfter(segment.transform, position);
 				
-				SegmentCreated?.Invoke();
+				SegmentCreated?.Invoke(i + 1);
 				await Task.Delay(SpawnTimePerSegmentsMillisecond, cancellationToken);
 			}
 

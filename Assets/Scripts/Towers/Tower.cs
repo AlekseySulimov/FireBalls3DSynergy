@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Towers.Generation.Disassembling;
 
 namespace Towers
 {
@@ -10,5 +11,7 @@ namespace Towers
 		{
 			_segments = segments;
 		}
+
+		public TowerSegment RemoveBottom() => _segments.Dequeue();
 	}
 }

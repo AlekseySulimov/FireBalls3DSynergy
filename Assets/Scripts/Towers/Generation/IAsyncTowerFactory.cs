@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace TowerGeneration
+namespace Towers.Generation
 {
 	public interface IAsyncTowerFactory
 	{

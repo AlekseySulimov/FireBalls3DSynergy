@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace TowerGeneration
+namespace Towers.Generation
 {
 	[CreateAssetMenu(fileName = "TowerFactory", menuName = "ScriptableObjects/Tower/Factory", order = 0)]
-	public class TowerFactorySo : ScriptableObject, IAsyncTowerFactory
+	public class TowerFactorySo : ScriptableObject, IAsyncTowerFactory, ITowerSegmentCreationCallBack
 	{
 		[SerializeField] private TowerSegment _segmentsPrefab;
 		[SerializeField] [Min(0)] private int  _segmentCount;
@@ -16,6 +15,8 @@ namespace TowerGeneration
 
 		[Space] [SerializeField] private Material[] _materials = Array.Empty<Material>();
 		private int SpawnTimePerSegmentsMillisecond => (int)(_spawnTimePerSegment * 1000);
+		
+		public event Action<int> SegmentCreated;
 		public async Task<Tower> CreateAsync(Transform tower, CancellationToken cancellationToken)
 		{
 			Vector3 position = tower.position;
@@ -29,6 +30,7 @@ namespace TowerGeneration
 
 				position = GetNextPositionAfter(segment.transform, position);
 				
+				SegmentCreated?.Invoke(i + 1);
 				await Task.Delay(SpawnTimePerSegmentsMillisecond, cancellationToken);
 			}
 
@@ -56,5 +58,6 @@ namespace TowerGeneration
 			int index = numberOfInstance % _materials.Length;
 			return _materials[index];
 		}
+
 	}
 }

@@ -5,7 +5,7 @@ using TweenStructures;
 using UnityEngine;
 using UnityObject = UnityEngine.Object;
 
-namespace Towers.TowerGeneration
+namespace Towers.Generation
 {
 	public class TowerGenerate : MonoBehaviour
 	{

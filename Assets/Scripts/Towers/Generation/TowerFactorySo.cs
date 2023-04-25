@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Towers.TowerGeneration
+namespace Towers.Generation
 {
 	[CreateAssetMenu(fileName = "TowerFactory", menuName = "ScriptableObjects/Tower/Factory", order = 0)]
 	public class TowerFactorySo : ScriptableObject, IAsyncTowerFactory

@@ -17,7 +17,7 @@ namespace Towers.Generation.Disassembling
 
 		public void TryRemoveBottom()
 		{
-			if (_tower.SegmentCount == 0 )
+			if (_tower.SegmentCount.Value == 0 )
 			{
 				Disassembled?.Invoke();
 				return;

@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace TowerGeneration
+namespace Towers.TowerGeneration
 {
 	[CreateAssetMenu(fileName = "TowerFactory", menuName = "ScriptableObjects/Tower/Factory", order = 0)]
 	public class TowerFactorySo : ScriptableObject, IAsyncTowerFactory
@@ -28,6 +27,7 @@ namespace TowerGeneration
 				segments.Enqueue(segment);
 
 				position = GetNextPositionAfter(segment.transform, position);
+				
 				
 				await Task.Delay(SpawnTimePerSegmentsMillisecond, cancellationToken);
 			}

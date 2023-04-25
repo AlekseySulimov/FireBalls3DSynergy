@@ -31,7 +31,6 @@ namespace Obstacles
 			_pool.Return(projectile);
 			_playerInputHandler.Disable();
 			_pool.Disable();
-
 			Vector3 hitPoint = other.contacts[0].point;
 
 			Projectile playerHitProjectile = _projectileFactory.Create();

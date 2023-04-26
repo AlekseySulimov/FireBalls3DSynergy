@@ -19,7 +19,6 @@ namespace Towers.Generation.Disassembling
 		{
 			if (_tower.SegmentCount.Value == 0 )
 			{
-				Disassembled?.Invoke();
 				return;
 			}
 			TowerSegment segment = _tower.RemoveBottom();
@@ -28,6 +27,11 @@ namespace Towers.Generation.Disassembling
 			_towerRoot.position -= Vector3.up * segmentScale.y;
 			
 			UnityObject.Destroy(segment.gameObject);
+			
+			if (_tower.SegmentCount.Value == 0 )
+			{
+				Disassembled?.Invoke();
+			}
 		}
 	}
 }

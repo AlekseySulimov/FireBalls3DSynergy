@@ -12,7 +12,7 @@ namespace Obstacles
 	{
 		public Transform Player;
 		public PlayerInputHandler PlayerInputHandler;
-		public ProjectilePool PlayerPool;
+		public ProjectilePool PlayerProjectilePool;
 	}
 
 	public class ObstacleCollision : MonoBehaviour
@@ -38,9 +38,9 @@ namespace Obstacles
 			      
 			_hasAlreadyCollided = true;
 
-			_obstacleCollisionFeedback.PlayerPool.Return(projectile);
+			_obstacleCollisionFeedback.PlayerProjectilePool.Return(projectile);
 			_obstacleCollisionFeedback.PlayerInputHandler.Disable();
-			_obstacleCollisionFeedback.PlayerPool.Disable();
+			_obstacleCollisionFeedback.PlayerProjectilePool.Disable();
 			Vector3 hitPoint = other.contacts[0].point;
 
 			Projectile playerHitProjectile = _projectileFactory.Create();

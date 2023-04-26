@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4891f55d5a0b4daaad84718d445634be, type: 3}
   m_Name: CharacterContainer
   m_EditorClassIdentifier: 
-  CharacterPrefab: {fileID: 0}
+  CharacterPrefab: {fileID: 1121259965096918155, guid: e02c27f8c6308464998a69da78df5354,
+    type: 3}

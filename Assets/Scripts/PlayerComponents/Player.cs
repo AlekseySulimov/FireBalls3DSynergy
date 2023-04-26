@@ -6,28 +6,36 @@ using Shooting;
 using Shooting.Pool;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Characters;
 
 namespace PlayerComponents
 {
 	public class Player : MonoBehaviour
 	{
-		[SerializeField] private Character _character;
+		[Header("Character")]
+		[SerializeField] private CharacterContainerSo _characterContainer;
+		
+		[Header("Path")]
+		[SerializeField] private MovePreferencesSo _movePreferences;
+		[SerializeField] private Path _path;
+		
+		[Header("Shooting")]
 		[SerializeField] private ShootingPreferencesSo _shootingPreferences;
+		
 		[SerializeField] private ProjectilePool _projectilePool;
 		
-		
-		[SerializeField] private Path _path;
-		[SerializeField] private MovePreferencesSo _movePreferences;
-
 		private Weapon _weapon;
 		private FireRate _fireRate;
 		private PathFollowing _pathFollowing;
+		
 		private void Start()
 		{
+			Character character = _characterContainer.Create(transform);
+			
 			_projectilePool.Initialize(_shootingPreferences.ProjectileFactory);
 			_projectilePool.Prewarm();
 
-			_weapon = new Weapon(_character.ShootPoint, _projectilePool, _shootingPreferences.ProjectileSpeed);
+			_weapon = new Weapon(character.ShootPoint, _projectilePool, _shootingPreferences.ProjectileSpeed);
 			_fireRate = new FireRate(_shootingPreferences.FireRate);
 			_pathFollowing = new PathFollowing(_path, this, _movePreferences);
 		}

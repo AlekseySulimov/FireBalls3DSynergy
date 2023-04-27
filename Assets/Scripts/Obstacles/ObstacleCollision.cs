@@ -1,7 +1,7 @@
 ﻿using System;
 using Coroutines;
 using Physics;
-using PlayerComponents;
+using Players;
 using Shooting;
 using Shooting.Pool;
 using UnityEngine;

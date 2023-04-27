@@ -32,6 +32,12 @@ namespace Towers.Generation.Disassembling
 			{
 				Disassembled?.Invoke();
 			}
+			
+		}
+
+		public TowerDisassemblingAwaiter GetAwaiter()
+		{
+			return new TowerDisassemblingAwaiter(this);
 		}
 	}
 }

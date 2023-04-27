@@ -3,7 +3,6 @@ using Obstacles;
 using Obstacles.Disappearing;
 using Obstacles.Generation;
 using Obstacles.Sequence;
-using PlayerComponents;
 using Shooting.Pool;
 using Tweening;
 using UnityEngine;

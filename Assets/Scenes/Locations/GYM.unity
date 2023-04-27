@@ -2046,7 +2046,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1458
+  m_Name: pb_Mesh-1456
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2439,7 +2439,7 @@ PrefabInstance:
     - target: {fileID: 8451720819751919428, guid: 92b7a6d592cc1a546bd5693f590c27fc,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2937
+      value: 2943
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92b7a6d592cc1a546bd5693f590c27fc, type: 3}
@@ -3212,7 +3212,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1271808099}
-  - component: {fileID: 1271808098}
   - component: {fileID: 1271808100}
   m_Layer: 0
   m_Name: Tower
@@ -3221,24 +3220,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1271808098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271808097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c3f3a6aa7204471856f97de65ace3a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _towerFactory: {fileID: 11400000, guid: 65946541fa741734cb4f072196b660e9, type: 2}
-  _towerRoot: {fileID: 233150069}
-  _rotationData:
-    To: {x: 0, y: 1080, z: 0}
-    Duration: 3
-    Ease: 9
 --- !u!4 &1271808099
 Transform:
   m_ObjectHideFlags: 0
@@ -3270,11 +3251,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e58350cda346acad194f49984544c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _generator: {fileID: 1271808098}
-  _towerRoot: {fileID: 233150069}
-  _projectileHitTrigger: {fileID: 1913630972}
-  _segmentsLeftText: {fileID: 118238235}
-  _audio: {fileID: 2095895361}
+  _towerRoot: {fileID: 0}
+  _spawnAnimation: {fileID: 0}
+  _projectileHitTrigger: {fileID: 0}
+  _segmentsLeftText: {fileID: 0}
+  _audio: {fileID: 0}
 --- !u!1 &1338056801
 GameObject:
   m_ObjectHideFlags: 0
@@ -3922,7 +3903,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ebad0573d84197b59e15040fd6291b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pool: {fileID: 1734181085}
 --- !u!1 &1734181084
 GameObject:
   m_ObjectHideFlags: 0
@@ -4519,14 +4499,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ebad0573d84197b59e15040fd6291b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pool: {fileID: 1734181085}
 --- !u!43 &1915442264
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1424
+  m_Name: pb_Mesh-1422
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4704,7 +4683,7 @@ PrefabInstance:
     - target: {fileID: 858591495638157258, guid: 0dbd0e5102954204e8e4ce2709f2ace2,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2904
+      value: 2907
       objectReference: {fileID: 0}
     - target: {fileID: 3111461087772813460, guid: 0dbd0e5102954204e8e4ce2709f2ace2,
         type: 3}

@@ -2,7 +2,7 @@
 
 namespace GameStates.Base
 {
-	[CreateAssetMenu(fileName = "GameState", menuName = "ScriptableObject/Game/State", order = 0)]
+	[CreateAssetMenu(fileName = "GameState", menuName = "ScriptableObjects/Game/States", order = 0)]
 	public abstract class GameStateSo : ScriptableObject, IGameState
 	{
 		public abstract void Enter();

@@ -2,7 +2,7 @@
 
 namespace GameStates.Base
 {
-	[CreateAssetMenu(fileName = "GameStateMachine", menuName = "ScriptableObjects/GameS/StateMachine")]
+	[CreateAssetMenu(fileName = "GameStateMachine", menuName = "ScriptableObjects/Game/StateMachine")]
 	public class GameStateMachineSo : ScriptableObject,IGameStateMachine
 	{
 		private GameStateMachine _stateMachine;

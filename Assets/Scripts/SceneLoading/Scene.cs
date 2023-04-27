@@ -2,6 +2,7 @@
 
 namespace SceneLoading
 {
+	[System.Serializable]
 	public struct Scene
 	{
 		public string Name;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace GameStates.States
 {
+	[CreateAssetMenu(fileName = "LevelEntryState", menuName = "ScriptableObjects/Game/States/LevelEntryState")]
 	public class LevelEntryStateSo : GameStateSo
 	{
 		[SerializeField] private Scene _scene;

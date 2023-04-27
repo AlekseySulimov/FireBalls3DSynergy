@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: 8980cfaa5c3195041912acd874b0e467
+  m_DefaultGroup: 386ee5569bebc3041b71c9c0b3bdb29d
   m_CachedHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -42,10 +42,11 @@ MonoBehaviour:
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: 36740ae3b5e69b44caf7723a7730b773, type: 2}
-  - {fileID: 11400000, guid: 7277048a648b0454aa6084eec534d537, type: 2}
-  - {fileID: 11400000, guid: 00e19027e7b6b1848b46d1d57807104e, type: 2}
   - {fileID: 11400000, guid: 45c3027abd4ebd5438411d13ed255b79, type: 2}
-  - {fileID: 11400000, guid: 6b9d415c97359394494a9e0c32af24e1, type: 2}
+  - {fileID: 11400000, guid: 61159e10e0805864ebc939c82441ae15, type: 2}
+  - {fileID: 11400000, guid: 1b61fd73c6331244db5fdfc6c31ee106, type: 2}
+  - {fileID: 11400000, guid: 1cfeb3c6971e4834fbf67a27c625ba1e, type: 2}
+  - {fileID: 11400000, guid: 5617add9e433f86468d187808f350c0f, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1

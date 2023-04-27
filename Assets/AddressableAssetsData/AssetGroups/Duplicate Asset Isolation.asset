@@ -15,8 +15,12 @@ MonoBehaviour:
   m_GroupName: Duplicate Asset Isolation
   m_Data:
     m_SerializedData: []
-  m_GUID: c9431fcc6e22afd42afc150aa0bdc727
+  m_GUID: 628141e169754214493aeeefe66a0c2b
   m_SerializeEntries:
+  - m_GUID: 31321ba15b8f8eb4c954353edc038b1d
+    m_Address: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 933532a4fcc9baf4fa0491de14d08ed7
     m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader
     m_ReadOnly: 0
@@ -25,9 +29,34 @@ MonoBehaviour:
     m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackError.shader
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ffb159a21c8a04135a5616979c828fab
+    m_Address: Assets/Audio/CasualGameSounds/DM-CGS-21.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 78959b239df9fbc4f9223c1c422c2d5d
+    m_Address: Assets/Fonts&Material/CascadiaCodePLSDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 68e6db2ebdc24f95958faec2be5558d6
+    m_Address: Assets/Plugins/TextMeshPro/Shaders/TMP_SDF.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fe393ace9b354375a9cb14cdbbc28be4
+    m_Address: Assets/Plugins/TextMeshPro/Shaders/TMP_SDF-Mobile.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: eb3c6fb598ded4c71b8968e1c40a3b4d
+    m_Address: Assets/AssetStore/Customizable Skybox/Stylized Sky/Shaders/Stylized
+      Sky.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2cddf2ee6a74aca44af00f5a49bd2cf1
+    m_Address: Assets/AssetStore/BitgemURPWater/StylisedWater/URP/Shaders/WaterVolume-URP.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5e50cd73f23f1334eae5840121a89a09, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: eeae8b6001a894b4b8d3d08a4c0f27f0, type: 2}
-    - {fileID: 11400000, guid: ef784c1cd67523f43b59e2c2ac4f24b2, type: 2}
+    - {fileID: 11400000, guid: 1c1c71d3db3b0a841be6528a8642b1a9, type: 2}
+    - {fileID: 11400000, guid: 62c9182d782213343a9b8a1b42b38648, type: 2}

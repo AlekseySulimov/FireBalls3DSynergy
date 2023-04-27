@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6156b3d217bd40f49526ff9277012349, type: 3}
   m_Name: LevelEntryState
   m_EditorClassIdentifier: 
-  _scene:
-    Name: Arctic1
+  _locationScene:
+    Name: Tropic1
     LoadMode: 0
+  _playerGeneratedPathScene:
+    Name: PlayerGeneratorPath
+    LoadMode: 1

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Tweening
 {
-	[CreateAssetMenu(fileName = "FastRotationTween", menuName = "ScriptableObject/Tweening/FastRotationTween", order = 0)]
+	[CreateAssetMenu(fileName = "FastRotationTween", menuName = "ScriptableObjects/Tweening/FastRotationTween", order = 0)]
 	public class FastRotationTweenSo : ScriptableObject, ITweenAnimation
 	{
 		[SerializeField] private Vector3TweenData _rotation;

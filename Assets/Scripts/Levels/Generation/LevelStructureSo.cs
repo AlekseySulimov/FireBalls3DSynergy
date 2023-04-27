@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Levels.Generation
 {
-	[CreateAssetMenu(fileName = "LevelStructure", menuName = "ScriptableObject/Levels/LevelStructure", order = 0)]
+	[CreateAssetMenu(fileName = "LevelStructure", menuName = "ScriptableObjects/Levels/LevelStructure")]
 	public class LevelStructureSo : ScriptableObject
 	{
 		[SerializeField] private Path _pathPrefab;
@@ -20,12 +20,13 @@ namespace Levels.Generation
 				return;			
 			}
 
+			/*
 			for (var i = 0; i < _pathPrefab.Segments.Count; i++)
 			{
 				_platforms.Add(default);
 			}
+			*/
 		}
-
 		public Path CreatePath(Transform pathRoot, ObstacleCollisionFeedback feedback)
 		{
 			Path path = Instantiate(_pathPrefab, pathRoot);

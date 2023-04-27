@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Tweening
 {
-	[CreateAssetMenu(fileName = "LocalMoveTween", menuName = "ScriptableObject/Tweening/LocalMoveTween", order = 0)]
+	[CreateAssetMenu(fileName = "LocalMoveTween", menuName = "ScriptableObjects/Tweening/LocalMoveTween", order = 0)]
 	public class LocalMoveTweenSo : ScriptableObject, ITweenAnimation, IAwaitableTweenAnimation
 	{
 		[SerializeField] private Vector3TweenData _move;

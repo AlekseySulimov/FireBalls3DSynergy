@@ -8,6 +8,7 @@ using UnityEngine;
 
 namespace Obstacles
 {
+	[System.Serializable]
 	public struct ObstacleCollisionFeedback
 	{
 		public Transform Player;

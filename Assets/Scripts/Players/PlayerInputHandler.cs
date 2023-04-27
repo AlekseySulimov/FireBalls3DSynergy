@@ -1,9 +1,8 @@
-﻿using System;
-using Input;
+﻿using Input;
 using UnityEngine;
 using Touch = Input.Touches.Touch;
 
-namespace PlayerComponents
+namespace Players
 {
 	public class PlayerInputHandler : MonoBehaviour
 	{

@@ -15,10 +15,10 @@ MonoBehaviour:
   _pathPrefab: {fileID: 5558226895285568931, guid: c885b1904ce01ba47a2b70bf9887087c,
     type: 3}
   _platforms:
-  - TowerStructure: {fileID: 11400000, guid: 9441eef8a85ff304999daaae06efe2ab, type: 2}
+  - TowerStructure: {fileID: 11400000, guid: 65946541fa741734cb4f072196b660e9, type: 2}
     Obstacles:
     - {fileID: 5379199466393541340, guid: b8ab7f4cd538ab44eb7ae94f830df8e9, type: 3}
-  - TowerStructure: {fileID: 11400000, guid: c5a565207b1c9734694d94ed5f84aa71, type: 2}
+  - TowerStructure: {fileID: 11400000, guid: 9c52b7a4a2fbfd947a07d1385f5e2b22, type: 2}
     Obstacles:
     - {fileID: 5379199466393541340, guid: b8ab7f4cd538ab44eb7ae94f830df8e9, type: 3}
     - {fileID: 5379199466393541340, guid: b8ab7f4cd538ab44eb7ae94f830df8e9, type: 3}

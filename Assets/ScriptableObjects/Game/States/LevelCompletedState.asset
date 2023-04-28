@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: LevelCompletedState
   m_EditorClassIdentifier: 
   _menu:
-    Name: 
+    Name: Menu
     LoadMode: 0
-  _levelChanging: {fileID: 0}
+  _levelChanging: {fileID: 11400000, guid: 02ea81cb4dfe8c043a6f04573d95d81b, type: 2}

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using Obstacles.Disappearing;
 using Paths;
 using Towers.Generation.Disassembling;
@@ -18,7 +19,7 @@ namespace Players
 			_inputHandler = inputHandler;
 		}
 
-		public async void StartMovingAsync()
+		public async void StartMovingAsync(CancellationToken cancellationToken)
 		{
 			IReadOnlyList<PathSegment> segments = _path.Segments;
 
@@ -29,7 +30,10 @@ namespace Players
 				
 				(TowerDisassembling towerDisassembling, ObstacleDisappearing obstacleDisappearing) 
 					= await pathSegment.PlatformBuilder.BuildAsync();
-				
+
+				if (cancellationToken.IsCancellationRequested)
+					return;
+
 				_inputHandler.Enable();
 
 				await towerDisassembling;

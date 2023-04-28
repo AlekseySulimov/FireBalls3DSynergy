@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Shooting.Pool;
 using Structures.ReactiveProperties;
@@ -32,7 +33,7 @@ namespace Paths.Builders
 			_structure = structure;
 		}
 
-		public async Task<TowerDisassembling> BuildAsync(ProjectilePool pool)
+		public async Task<TowerDisassembling> BuildAsync(ProjectilePool pool, CancellationToken cancellationToken)
 		{
 			_spawnAnimation.ApplyTo(_towerRoot);
 			_projectileHitTrigger.Initialize(pool);
@@ -40,9 +41,12 @@ namespace Paths.Builders
 			TowerGenerator generator = new TowerGenerator(_structure);
 			generator.SegmentCreated += _segmentsLeftText.UpdateTextValue;
 				
-			Tower tower = await generator.CreateAsync(_towerRoot);
+			Tower tower = await generator.CreateAsync(_towerRoot, cancellationToken);
 			TowerDisassembling disassembling = new TowerDisassembling(tower, _towerRoot);
 
+			if (cancellationToken.IsCancellationRequested)
+				return disassembling;
+			
 			SubscribeComponents(disassembling, tower, generator);
 			return disassembling;
 		}

@@ -1,4 +1,4 @@
-﻿namespace Levels
+﻿namespace Levels.Interfaces
 {
 	public interface ILevelNumberProvider
 	{

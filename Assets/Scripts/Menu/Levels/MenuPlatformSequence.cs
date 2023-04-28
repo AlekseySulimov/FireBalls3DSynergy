@@ -1,5 +1,6 @@
 ﻿using System;
 using Levels;
+using Levels.Interfaces;
 using Tools;
 using UnityEngine;
 using UnityEngine.AddressableAssets;

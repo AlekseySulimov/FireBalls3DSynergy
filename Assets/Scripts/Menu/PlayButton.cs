@@ -3,6 +3,7 @@ using GameStates.Base;
 using GameStates.States;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityObject = UnityEngine.Object;
 
 namespace Menu
 {

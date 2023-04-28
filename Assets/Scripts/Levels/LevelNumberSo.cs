@@ -2,7 +2,7 @@
 
 namespace Levels
 {
-	[CreateAssetMenu(menuName = "LevelNumber", fileName = "ScriptableObjects/Level/LevelNumber")]
+	[CreateAssetMenu(fileName= "LevelNumber", menuName = "ScriptableObjects/Levels/LevelNumber")]
 	public class LevelNumberSo : ScriptableObject
 	{
 		public int Value;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -189,7 +189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &56278047
 GameObject:
@@ -508,7 +508,7 @@ RectTransform:
   m_Children:
   - {fileID: 320776512}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -634,7 +634,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pathRoot: {fileID: 56278048}
-  _structure: {fileID: 11400000, guid: 33c8b81a6b6352f4cb96a8a8d7ca9dfa, type: 2}
+  _pathStructureContainer: {fileID: 11400000, guid: 5116675c170f03a40b7b556cab0a3e20,
+    type: 2}
   _playerMovement: {fileID: 1792514739}
   _obstacleCollisionFeedback:
     Player: {fileID: 1792514742}
@@ -757,5 +758,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

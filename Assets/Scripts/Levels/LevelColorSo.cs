@@ -2,7 +2,7 @@
 
 namespace Levels
 {
-	[CreateAssetMenu(fileName = "LevelColors", menuName = "ScriptableObject/Menu/Level/Colors")]
+	[CreateAssetMenu(fileName = "LevelColors", menuName = "ScriptableObjects/Menu/Level/Colors")]
 	public class LevelColorSo : ScriptableObject
 	{
 		[SerializeField] private Color _passedLevels = Color.green;

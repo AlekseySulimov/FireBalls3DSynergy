@@ -18,7 +18,7 @@ namespace Levels
 
 		public void StepToNextLevel()
 		{
-			_levelNumber.Value = Math.Clamp(_levelNumber.Value + 1, 0, _storage.Levels.Count);
+			_levelNumber.Value = Math.Clamp(_levelNumber.Value + 1, 1, _storage.Levels.Count);
 		}
 	}
 }

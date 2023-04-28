@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57ae7609874c4caea6f2a2e42e0b9042, type: 3}
-  m_Name: '{#1}LevelStructure'
+  m_Name: '{#2}PathStructure'
   m_EditorClassIdentifier: 
   _pathPrefab: {fileID: 5558226895285568931, guid: c885b1904ce01ba47a2b70bf9887087c,
     type: 3}
@@ -18,7 +18,7 @@ MonoBehaviour:
   - TowerStructure: {fileID: 11400000, guid: 65946541fa741734cb4f072196b660e9, type: 2}
     Obstacles:
     - {fileID: 5379199466393541340, guid: b8ab7f4cd538ab44eb7ae94f830df8e9, type: 3}
-  - TowerStructure: {fileID: 11400000, guid: 9441eef8a85ff304999daaae06efe2ab, type: 2}
+  - TowerStructure: {fileID: 11400000, guid: c5a565207b1c9734694d94ed5f84aa71, type: 2}
     Obstacles:
     - {fileID: 5379199466393541340, guid: b8ab7f4cd538ab44eb7ae94f830df8e9, type: 3}
     - {fileID: 5379199466393541340, guid: b8ab7f4cd538ab44eb7ae94f830df8e9, type: 3}

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efc307050a89461389f06aba9a24a1d0, type: 3}
-  m_Name: TowerStructure20Segments
+  m_Name: TowerStructure30Segments
   m_EditorClassIdentifier: 
   _segmentsPrefab: {fileID: -6360458054566348527, guid: 0de34a5138b1d7c4eb901b9dd20ee886,
     type: 3}
-  _segmentCount: 20
-  _spawnTimePerSegment: 0.1
+  _segmentCount: 30
+  _spawnTimePerSegment: 0.05
   _materials:
   - {fileID: 2100000, guid: 6b657631bf10c074f8c7aed509e4952b, type: 2}
   - {fileID: 2100000, guid: e43c2005c6b81e44397736f62d4dfb49, type: 2}

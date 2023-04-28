@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Tropic1
+  m_EditorClassIdentifier: 
+  m_GroupName: Tropic1
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c44e11bfbdbf00e48a956e0fba48f53e
+  m_SerializeEntries:
+  - m_GUID: f4c1a23e1822cc541b5052b1cffae49f
+    m_Address: Tropic1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5e50cd73f23f1334eae5840121a89a09, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 546d7b9ab29d01946a0b339248a511b5, type: 2}
+    - {fileID: 11400000, guid: a6a7a7ca6c549bd4390e34b3caeb2570, type: 2}

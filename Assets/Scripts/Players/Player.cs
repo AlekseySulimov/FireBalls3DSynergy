@@ -1,4 +1,5 @@
-﻿using Characters;
+﻿using System;
+using Characters;
 using Paths;
 using Shooting;
 using Shooting.Pool;
@@ -19,6 +20,8 @@ namespace Players
 		private Weapon _weapon;
 		private FireRate _fireRate;
 		private PathFollowing _pathFollowing;
+
+		public event Action Died;
 		
 		private void Start()
 		{
@@ -35,6 +38,12 @@ namespace Players
 		public void Shoot() =>
 			_fireRate.Shoot(_weapon);
 
-
+		private void OnTriggerEnter(Collider other)
+		{
+			if (other.TryGetComponent(out Projectile _))
+			{
+				Died?.Invoke();
+			}
+		}
 	}
 }

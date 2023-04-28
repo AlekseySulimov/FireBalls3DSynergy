@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Menu
+  m_EditorClassIdentifier: 
+  m_GroupName: Menu
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 00a97bbafb4d9ec4281a9999c2a75d9f
+  m_SerializeEntries:
+  - m_GUID: 99c9720ab356a0642a771bea13969a05
+    m_Address: Menu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 52b9038651c962d419835a8e8ccd84a5
+    m_Address: Assets/Prefabs/Menu/LevelMarker.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5e50cd73f23f1334eae5840121a89a09, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 050fbe74474a6e8439f51dcd47602a1b, type: 2}
+    - {fileID: 11400000, guid: 85c183b55ef6aa848bab9de2679af565, type: 2}

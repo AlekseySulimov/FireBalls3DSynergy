@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57ae7609874c4caea6f2a2e42e0b9042, type: 3}
+  m_Name: '{#1}PathStructure'
+  m_EditorClassIdentifier: 
+  _pathPrefab: {fileID: 5558226895285568931, guid: c885b1904ce01ba47a2b70bf9887087c,
+    type: 3}
+  _platforms:
+  - TowerStructure: {fileID: 11400000, guid: 65946541fa741734cb4f072196b660e9, type: 2}
+    Obstacles:
+    - {fileID: 5379199466393541340, guid: b8ab7f4cd538ab44eb7ae94f830df8e9, type: 3}
+  - TowerStructure: {fileID: 11400000, guid: 9c52b7a4a2fbfd947a07d1385f5e2b22, type: 2}
+    Obstacles:
+    - {fileID: 5379199466393541340, guid: b8ab7f4cd538ab44eb7ae94f830df8e9, type: 3}
+    - {fileID: 5379199466393541340, guid: b8ab7f4cd538ab44eb7ae94f830df8e9, type: 3}

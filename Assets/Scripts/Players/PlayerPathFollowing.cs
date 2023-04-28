@@ -2,7 +2,9 @@
 using System.Threading;
 using Obstacles.Disappearing;
 using Paths;
+using Paths.Completion;
 using Towers.Generation.Disassembling;
+using Unity.VisualScripting;
 
 namespace Players
 {
@@ -11,12 +13,13 @@ namespace Players
 		private readonly PathFollowing _pathFollowing;
 		private readonly Path _path;
 		private readonly PlayerInputHandler _inputHandler;
-
-		public PlayerPathFollowing(PathFollowing pathFollowing, Path path, PlayerInputHandler inputHandler)
+		private readonly IPathCompletion _pathCompletion;
+		public PlayerPathFollowing(PathFollowing pathFollowing, Path path, PlayerInputHandler inputHandler, IPathCompletion pathCompletion)
 		{
 			_pathFollowing = pathFollowing;
 			_path = path;
 			_inputHandler = inputHandler;
+			_pathCompletion = pathCompletion;
 		}
 
 		public async void StartMovingAsync(CancellationToken cancellationToken)
@@ -39,6 +42,8 @@ namespace Players
 				await towerDisassembling;
 				await obstacleDisappearing.ApplyAsync();
 			}
+
+			_pathCompletion.Complete();
 		}
 	}
 }

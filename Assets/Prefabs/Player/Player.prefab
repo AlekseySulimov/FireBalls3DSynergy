@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movePreferences: {fileID: 11400000, guid: fcb80f0dcc9c19a438d9536521bbe48d, type: 2}
+  _stateMachine: {fileID: 11400000, guid: 9ce4b3e335b0b3243b145a246d99878f, type: 2}
   _inputHandler: {fileID: 2641396451879169767}
   _player: {fileID: 2641396451879169765}
 --- !u!1 &2641396452413023290

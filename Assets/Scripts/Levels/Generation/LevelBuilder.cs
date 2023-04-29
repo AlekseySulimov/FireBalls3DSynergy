@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using Ioc;
 using Obstacles;
 using Paths;
 using Players;
@@ -13,7 +14,7 @@ namespace Levels.Generation
 	{
 		[Header("Path")]
 		[SerializeField] private Transform _pathRoot;
-		[SerializeField] private PathStructureContainerSo _pathStructureContainer;
+		[SerializeField] private PathStructureContainer _pathStructureContainer;
 		
 		[Header("Player")] 
 		[SerializeField] private PlayerMovement _playerMovement;
@@ -34,7 +35,11 @@ namespace Levels.Generation
 
 		private void Build()
 		{
-			Path path = PathStructure.CreatePath(_pathRoot, _obstacleCollisionFeedback, _cancellationTokenSource);
+			Path path = Container
+				.InstanceOf<PathStructureContainer>()
+				.PathStructure.
+				CreatePath(_pathRoot, _obstacleCollisionFeedback, _cancellationTokenSource);
+			
 			Vector3 initialPosition = path.Segments[0].Waypoints[0].position;
 			
 			_playerMovement.StartMovingOn(path, initialPosition, _cancellationTokenSource);

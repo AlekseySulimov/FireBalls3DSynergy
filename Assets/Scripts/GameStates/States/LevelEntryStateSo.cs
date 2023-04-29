@@ -1,5 +1,6 @@
 ﻿using System;
 using GameStates.Base;
+using Ioc;
 using Levels;
 using Levels.Generation;
 using Levels.Interfaces;
@@ -15,11 +16,11 @@ namespace GameStates.States
 	{
 		[SerializeField] private Scene _playerGeneratedPathScene;
 		[SerializeField] private UnityObject _levelProvider;
-		[SerializeField] private PathStructureContainerSo _pathStructureContainer;
 			
 
 		private readonly IAsyncSceneLoading _sceneLoading = new AddressablesSceneLoading();
 		private ILevelProvider LevelProvider => (ILevelProvider)_levelProvider;
+		private Level Level => LevelProvider.Current;
 	
 		private void OnValidate()
 		{
@@ -28,7 +29,11 @@ namespace GameStates.States
 
 		public override async void Enter()
 		{
-			_pathStructureContainer.PathStructure = CurrentLevel().PathStructure;
+			Container.Register(new PathStructureContainer
+			{
+				PathStructure = Level.PathStructure
+			});
+			
 
 			await _sceneLoading.LoadAsync(CurrentLevel().LocationScene);
 			await _sceneLoading.LoadAsync(_playerGeneratedPathScene);

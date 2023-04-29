@@ -12,8 +12,10 @@ namespace DataPersistence.Initialization
 		private readonly IAsyncFileService _fileService = new JsonNetFileService();
 		public override async Task InitializeAsync()
 		{
-			LevelNumber levelNumber = await _fileService.LoadAsync<LevelNumber>(_filePath.Value);
+			LevelNumber levelNumber = await _fileService.LoadAsync<LevelNumber>(_filePath.Value) ?? EnsureCreated();
 			Container.Register(levelNumber);
 		}
+
+		private LevelNumber EnsureCreated() => new LevelNumber() { Value = 1 };
 	}
 }

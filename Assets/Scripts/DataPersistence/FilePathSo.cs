@@ -1,9 +1,10 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using UnityEngine;
 
 namespace DataPersistence
 {
-	[CreateAssetMenu(fileName = "FilePath", menuName = "ScriptableObject/Data/FilePath")]
+	[CreateAssetMenu(fileName = "FilePath", menuName = "ScriptableObjects/Data/FilePath")]
 	public class FilePathSo : ScriptableObject
 	{
 		[SerializeField] private string _fileName;
@@ -15,5 +16,17 @@ namespace DataPersistence
 				? Application.streamingAssetsPath
 				: Application.persistentDataPath;
 
+		private void OnEnable()
+		{
+			EnsureCreated();
+		}
+
+		private void EnsureCreated()
+		{
+			if (File.Exists(Value) == false)
+			{
+				using FileStream fileStream = File.Create(Value);
+			}
+		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using Ioc;
 using Levels.Interfaces;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -10,15 +11,15 @@ namespace Levels
 	public class CurrentLevelSo : ScriptableObject,ILevelNumberProvider, ILevelProvider,ILevelChanging
 	{
 		[SerializeField] private LevelStorageSo _storage;
-		[SerializeField] private LevelNumberSo _levelNumber;
+		 private LevelNumber LevelNumber => Container.InstanceOf<LevelNumber>();
 
 
-		public int Value => _levelNumber.Value;
-		public Level Current => _storage._levels[_levelNumber.Value - 1];
+		public int Value => LevelNumber.Value;
+		public Level Current => _storage._levels[LevelNumber.Value - 1];
 
 		public void StepToNextLevel()
 		{
-			_levelNumber.Value = Math.Clamp(_levelNumber.Value + 1, 1, _storage.Levels.Count);
+			LevelNumber.Value = Math.Clamp(LevelNumber.Value + 1, 1, _storage.Levels.Count);
 		}
 	}
 }

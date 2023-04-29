@@ -52,7 +52,7 @@ namespace Menu.Audio
 
 		public void OnButtonClicked()
 		{
-			AudioStatus audioStatus = _statusProvider.StatusOf(_group); //.Next();
+			AudioStatus audioStatus = _statusProvider.StatusOf(_group).Next();
 			_image.sprite = _statuses[audioStatus];
 			_operations[audioStatus].Invoke();
 		}

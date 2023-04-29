@@ -4,7 +4,7 @@ using DataPersistence.Files;
 using Ioc;
 using UnityEngine;
 
-namespace DataPersistence.Saves.Saves
+namespace DataPersistence.Saves
 {
 	public class GameAudioSave : MonoBehaviour
 	{

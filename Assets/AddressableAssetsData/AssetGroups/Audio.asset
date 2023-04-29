@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
   m_Name: Audio
   m_EditorClassIdentifier: 
-  m_GroupName: Packed Assets
+  m_GroupName: Audio
   m_Data:
     m_SerializedData: []
   m_GUID: be68e7a8e3579e644995a8d443076d20
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 3bb306b6c270c7d46bdda5d44a16a547
+    m_Address: AudioMixer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5e50cd73f23f1334eae5840121a89a09, type: 2}
   m_SchemaSet:

@@ -3,7 +3,7 @@ using Ioc;
 using Levels;
 using UnityEngine;
 
-namespace DataPersistence.Saves.Saves
+namespace DataPersistence.Saves
 {
 	public class LevelSave : MonoBehaviour
 	{
